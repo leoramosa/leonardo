@@ -5,7 +5,7 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import FormHome from './../components/forms/Form'
-
+import { Link } from 'react-scroll'
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -409,11 +409,13 @@ const { t } = useTranslation();
                   </ul>
                 </div>
                 <div className="project_button">
-                  <a href="https://petshop-peru.netlify.app/" target="blank">
+                  <Link to='contact'
+              smooth={true}
+              duration={1000}>
                   <div className="btn-home">
                   Solicitud de cotización
                     </div>
-                  </a>
+                  </Link>
                   
                 </div>
               </div>
@@ -436,11 +438,13 @@ const { t } = useTranslation();
                   </ul>
                 </div>
                 <div className="project_button">
-                  <a href="https://petshop-peru.netlify.app/" target="blank">
+                <Link to='contact'
+              smooth={true}
+              duration={1000}>
                   <div className="btn-home">
-                    Solicitud de cotización
+                  Solicitud de cotización
                     </div>
-                  </a>
+                  </Link>
                   
                 </div>
               </div>
@@ -468,11 +472,13 @@ const { t } = useTranslation();
                   </ul>
                 </div>
                 <div className="project_button">
-                  <a href="https://petshop-peru.netlify.app/" target="blank">
+                <Link to='contact'
+              smooth={true}
+              duration={1000}>
                   <div className="btn-home">
-                    Solicitud de cotizacion
+                  Solicitud de cotización
                     </div>
-                  </a>
+                  </Link>
                   
                 </div>
               </div>
