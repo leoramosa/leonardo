@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.25fa9a61.chunk.css",
+    "main.js": "/static/js/main.323a74a0.chunk.js",
+    "main.js.map": "/static/js/main.323a74a0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.81f01d93.js",
+    "runtime-main.js.map": "/static/js/runtime-main.81f01d93.js.map",
+    "static/css/2.919eab68.chunk.css": "/static/css/2.919eab68.chunk.css",
+    "static/js/2.665b854d.chunk.js": "/static/js/2.665b854d.chunk.js",
+    "static/js/2.665b854d.chunk.js.map": "/static/js/2.665b854d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8f9db6c737bcb26347b84e3f40a07c57.js": "/precache-manifest.8f9db6c737bcb26347b84e3f40a07c57.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.919eab68.chunk.css.map": "/static/css/2.919eab68.chunk.css.map",
+    "static/css/main.25fa9a61.chunk.css.map": "/static/css/main.25fa9a61.chunk.css.map",
+    "static/js/2.665b854d.chunk.js.LICENSE.txt": "/static/js/2.665b854d.chunk.js.LICENSE.txt",
+    "static/media/analitica.jpg": "/static/media/analitica.7236d735.jpg",
+    "static/media/base.svg": "/static/media/base.b116857f.svg",
+    "static/media/code.svg": "/static/media/code.00c47a20.svg",
+    "static/media/desarrollo.jpg": "/static/media/desarrollo.9e1c0036.jpg",
+    "static/media/ecommerce.jpg": "/static/media/ecommerce.fb98fae5.jpg",
+    "static/media/all.min.css": "/static/media/fa-solid-900.8e1ed89b.woff2",
+    "static/media/gestion.jpg": "/static/media/gestion.3bfaa2c6.jpg",
+    "static/media/hero.svg": "/static/media/hero.ae74261d.svg",
+    "static/media/mobile.jpg": "/static/media/mobile.0b8770b8.jpg",
+    "static/media/pencil.svg": "/static/media/pencil.54adb9ad.svg",
+    "static/media/project1.jpg": "/static/media/project1.cf5d9d72.jpg",
+    "static/media/project2.jpg": "/static/media/project2.5423014a.jpg",
+    "static/media/project3.jpg": "/static/media/project3.dc01c737.jpg",
+    "static/media/project4.jpg": "/static/media/project4.78f222e4.jpg",
+    "static/media/project5.jpg": "/static/media/project5.5fb49117.jpg",
+    "static/media/project6.jpg": "/static/media/project6.937acfad.jpg",
+    "static/media/web.jpg": "/static/media/web.5d93f029.jpg",
+    "static/media/whatsapp.png": "/static/media/whatsapp.3650878b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81f01d93.js",
+    "static/css/2.919eab68.chunk.css",
+    "static/js/2.665b854d.chunk.js",
+    "static/css/main.25fa9a61.chunk.css",
+    "static/js/main.323a74a0.chunk.js"
+  ]
+}
