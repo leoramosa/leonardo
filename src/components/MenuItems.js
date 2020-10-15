@@ -1,25 +1,13 @@
-import React from "react";
-
 export const MenuItems = [
   {
-    title: "Home",
-    to: "/",
-    cName: "nav-links",
+    title: 'Español',
+    cName: 'dropdown-link'
   },
   {
-    title: "Products",
-    to: "/products/",
-    cName: "nav-links",
+    title: 'Ingles',
+   
+    cName: 'dropdown-link'
   },
 
-  {
-    title: "Contact Us",
-    to: "#",
-    cName: "nav-links",
-  },
-  {
-    title: "Sign up",
-    to: "#",
-    cName: "nav-links-mobile",
-  },
+
 ];

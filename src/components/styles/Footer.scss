@@ -1,7 +1,7 @@
 .Footer {
   padding: 50px 0px;
   margin-top: 20px;
-  background-color: #00498a;
+  background-color: #7d1ef8;
   color: white;
   h3 {
     color: white;
@@ -30,15 +30,43 @@
 
 .column-footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .column-footer-content {
   padding-left: 45px;
+  text-align: right;
+}
+
+.social{
+  color: white;
+    padding: 14px;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 500px) {
   .column-footer {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.column-footer {
+  grid-template-columns: repeat(1, 1fr);
+}
+.column-footer-content {
+ padding: 0;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+.column-footer {
+  grid-template-columns: repeat(1, 1fr);
+}
+.column-footer-content {
+ padding: 0;
+  text-align: center;
+}
 }

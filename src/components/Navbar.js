@@ -1,115 +1,162 @@
-import React, { useEffect, useState, useContext } from 'react';
-
+import React, { useState } from 'react';
+import { Link } from 'react-scroll'
 import './styles/Navbar.css';
-import { Link } from 'react-router-dom';
-import { AppContext } from '../context/AppContext';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
-import LogoPet from '../images/logo.png';
-import Badge from '@material-ui/core/Badge';
-import ModalCart from './ModalCart';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-
+import { useTranslation } from 'react-i18next';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  badges: {
-    '& .MuiBadge-badge': {
-      background: 'white',
-      color: 'black',
+  formControl: {
+    margin: theme.spacing(0),
+    minWidth: 120,
+    width: '100%',
+    justifyContent:' center',
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
     },
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.down('md')]: {
+      display: 'auto',
+    },
+    [theme.breakpoints.down('xl')]: {
+      display: 'auto',
+    },
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+  selectHome: {
+    background:'white',  
+    marginTop:0
   },
 }));
 
+
 function Navbar() {
   const classes = useStyles();
-  let { cart, setCart } = useContext(AppContext);
 
-  useEffect(() => {
-    if (localStorage.cart) {
-      let nCart = localStorage.getItem('cart');
-      setCart(JSON.parse(nCart));
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState('en');
+
+  const onChangeLanguage = () => {
+    i18n.changeLanguage(language);
+    if (language === 'en') {
+      setLanguage('es');
+    } else {
+      setLanguage('en');
     }
-  }, [setCart]);
-
-  const [clicked, setClicked] = useState(false);
-
-  /*
-  usando clasess funcionaria asi
-   const handleClick = () => {
-    setClicked({ clicked });
-  }; */
-
-  const [showModalCart, setShowModalCart] = useState(false);
-
-  const OpenModalCart = () => {
-    setShowModalCart(true);
   };
-  const CloseModalCart = () => {
-    setShowModalCart(false);
+
+    
+  const [lan, setLang] = useState('1');
+  const handleChange = (event) => {
+    setLang(event.target.value);
+    onChangeLanguage()
   };
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+  
 
   return (
-    <div className="container-nav">
-      <div className="content-nav">
-        <nav className="NavbarItems">
-          <h1 className="navbar-logo">
-            <img src={LogoPet} alt="" />
-          </h1>
-          <div
-            className="menu-icon"
-            onClick={() => setClicked((clicked) => !clicked)}
-          >
-            <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </div>
-          <div className="cart-mobile">
-            <li className="carticon" onClick={OpenModalCart}>
-              <Badge className={classes.badges} badgeContent={cart.length}>
-                <ShoppingCartIcon />
-              </Badge>
-            </li>
-          </div>
-          <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
-            <li>
-              <Link
-                to="/"
-                className="nav-links"
-                onClick={() => setClicked((clicked) => !clicked)}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/products"
-                onClick={() => setClicked((clicked) => !clicked)}
-                className="nav-links"
-              >
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Contact"
-                className="nav-links"
-                onClick={() => setClicked((clicked) => !clicked)}
-              >
-                Contact Us
-              </Link>
-            </li>
-            <li className="cart-desktop" onClick={OpenModalCart}>
-              <Badge className={classes.badges} badgeContent={cart.length}>
-                <ShoppingCartIcon />
-              </Badge>
-            </li>
-            <ModalCart
-              CloseModalCart={CloseModalCart}
-              showModalCart={showModalCart}
-            />
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <>
+      <nav className='navbar'>
+        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <i className='fab fa-firstdraft' />
+          Leo Ramos
+        </Link>
+        <div className='menu-icon' onClick={handleClick}>
+          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+        </div>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <li className='nav-item'>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              Inicio
+            </Link>
+          </li>
+          
+          <li className='nav-item'>
+            <Link
+              to='about'
+              smooth={true}
+              duration={1000}
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Conóceme
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='portafolio'
+              smooth={true}
+              duration={1000}
+              onClick={closeMobileMenu}
+              className='nav-links'
+            >
+              Portafolio
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='price'
+              smooth={true}
+              duration={1000}
+              onClick={closeMobileMenu}
+              className='nav-links'
+              
+            >
+              Precios
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='contact'
+              smooth={true}
+              duration={1000}
+              onClick={closeMobileMenu}
+              className='nav-links'
+              
+            >
+              Contáctame
+            </Link>
+          </li>
+          <FormControl
+                      variant="outlined"
+                      className={classes.formControl}
+            
+                    >
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={lan}
+                        onChange={handleChange}
+                        className={classes.selectHome}
+                        
+                      >
+                        
+                        <MenuItem value={1}
+                        
+                        >{t('home.button')}</MenuItem>
+                        <MenuItem value={2}
+                        
+                        >{t('home.button.lan')}</MenuItem>
+
+                      </Select>
+                    </FormControl>
+          
+          
+        </ul>
+        
+      </nav>
+    </>
   );
 }
 

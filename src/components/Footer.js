@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles/Footer.scss';
-import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div>
@@ -8,40 +7,19 @@ function Footer() {
         <div className="container-footer">
           <div className="column-footer">
             <div className="column-footer-content">
-              <div className="box">
-                <h3>Productos</h3>
-                <ul>
-                  <li>
-                    <Link to="">Nuevos Productos</Link>
-                  </li>
-                  <li>
-                    <Link to="">En oferta</Link>
-                  </li>
-                  <li>
-                    <Link to="">Últimos productos</Link>
-                  </li>
-                </ul>
+              <div className="box-footer">
+              Copyright © 2020 Leonardo Ramos - Todos los derechos reservados.
               </div>
             </div>
+            
             <div className="column-footer-content">
-              <div className="box">
-                <h3>Acerca del Alpaka</h3>
-                <ul>
-                  <li>
-                    <Link to="">Sobre nosotros</Link>
-                  </li>
-                  <li>
-                    <Link to="">Nuestras tiendas</Link>
-                  </li>
-                </ul>
+            <div className="single-footer-widget">
+              <div className="footer-social ">
+              Mis redes sociales 
+                <a className="social" href="https://www.instagram.com/leo.ramosa/" target="blank"><i className="fab fa-facebook-square"></i></a>
+                <a className="social" href="https://www.facebook.com/leonardo.ramosa.13" target="blank"><i className="fab fa-instagram-square"></i></a>
               </div>
             </div>
-            <div className="column-footer-content">
-              <div className="box">
-                <h3>Contacto</h3>
-                <input />
-                <button>Enviar</button>
-              </div>
             </div>
           </div>
         </div>
