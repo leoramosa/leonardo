@@ -128,6 +128,7 @@ h1{
   padding: 110px 0;
 }
 .title_img{
+  padding-right: 64px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -143,7 +144,7 @@ h1{
   width: 49%;
 }
 .img_info img{
-  padding-left: 52px;
+  height: 230px;
 }
 /* style hero */
 
@@ -400,6 +401,7 @@ h1{
 @media screen and (max-width: 1450px){
   .title_img{
     width: 50%;
+    padding-right: 0;
   }
   .img_info {
     width: 50%;
@@ -436,7 +438,6 @@ h1{
 
   .about__content {
     width: auto;
-    max-width: 1280px;
     margin: 0 auto;
     justify-content: center;
 }
@@ -448,8 +449,12 @@ h1{
 }
 
 }
-
-
+@media screen and (max-width: 960px){
+  .img_info img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 @media screen and (max-width: 768px){
   .title_img h1 {
@@ -534,6 +539,10 @@ h1{
   .img_info{
     width: 90%;
   }
+  .img_info img{
+    height: auto;
+    width: 90%;
+  }
   .column{
     width: 100%;
   }
@@ -573,6 +582,9 @@ h1{
 }
 
 @media screen and (max-width:480px){
+  .tilte-skills{
+    font-size: 20px;
+  }
 
   .skills-title h1, .price-title h1 {
     font-size: 23px;
