@@ -39,6 +39,7 @@
 }
 
 .nav-links {
+  cursor: pointer;
   color: white;
   text-decoration: none;
   padding: 0.5rem 0.4rem;
@@ -56,6 +57,10 @@
 
 .nav-links-mobile {
   display: none;
+}
+
+.navbar-logo img {
+  height: 42px;
 }
 
 .menu-icon {
@@ -113,10 +118,14 @@
   }
 
   .navbar-logo {
+    font-size: 24px;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(0%, 50%);
+    transform: translate(0%, 45%);
+  }
+  .navbar-logo img {
+    height: 37px;
   }
 
   .menu-icon {

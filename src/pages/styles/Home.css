@@ -372,7 +372,9 @@ h1{
 }
 
 /* style contact */
-
+.link-scroll{
+  cursor: pointer;
+}
 
 @media screen and (min-width: 1216px){
   .skills .box .content .columns .column {
@@ -503,6 +505,35 @@ h1{
 }
 
 @media screen and (max-width: 600px){
+
+  .contact-project{
+    display: inherit;
+    padding: 18px;
+  }
+
+  .start-project{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .start-project_info{
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .start-project_btn{
+    width: 100%;
+  }
+
+  .start-project_btn_content{
+    padding: 5px 63px;
+  }
+
+  .img_info{
+    width: 90%;
+  }
   .column{
     width: 100%;
   }
@@ -530,9 +561,23 @@ h1{
   .columns {
     display: block;
   }
+
+  .skills-title h1, .price-title  h1{
+    font-size: 27px;
+    padding-bottom: 24px;
+  }
+
+
+
+
 }
 
 @media screen and (max-width:480px){
+
+  .skills-title h1, .price-title h1 {
+    font-size: 23px;
+    padding-bottom: 24px;
+}
   .title_img h1 {
     font-size: 25px;
     padding-bottom: 5px;

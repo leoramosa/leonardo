@@ -70,7 +70,14 @@ const { t } = useTranslation();
             </div>
             <div className="start-project_btn">
               <div className="start-project_btn_content">
+                <Link
+                to='price'
+                smooth={true}
+                duration={1000}
+                className="link-scroll"
+                >
                 comenzar
+                </Link>
               </div>
             </div>
           </div>
@@ -244,7 +251,7 @@ const { t } = useTranslation();
                 <figure className="image">
                   <img src={base} alt=""/>
                 </figure>
-                <h1 className="tilte-skills">Back-end Jr.</h1>
+                <h1 className="tilte-skills">Programador Back-end Jr.</h1>
                 <p>Desarrollo aplicaciones web funcionales utilizando Python y Django, creo ApiRestFull con Djnago Rest Frameword o Express</p>
                 <p className="list-title">Lenguajes de programacion:</p>
                 <p>Python, Flash, Django, Next, Express, MongoDB, MySql</p>
@@ -263,7 +270,7 @@ const { t } = useTranslation();
       <section className="project section" id="portafolio">
         <div className="content-project">
         <div className="skills-title">
-            <h1>Mi trabajo reciente</h1>
+            <h1>Mis trabajos recientes</h1>
           </div>
           <div className="project_init">
             <div className="column column-project">
@@ -411,7 +418,9 @@ const { t } = useTranslation();
                 <div className="project_button">
                   <Link to='contact'
               smooth={true}
-              duration={1000}>
+              duration={1000}
+              className="link-scroll">
+                
                   <div className="btn-home">
                   Solicitud de cotización
                     </div>
@@ -440,7 +449,8 @@ const { t } = useTranslation();
                 <div className="project_button">
                 <Link to='contact'
               smooth={true}
-              duration={1000}>
+              duration={1000}
+              className="link-scroll">
                   <div className="btn-home">
                   Solicitud de cotización
                     </div>
@@ -474,7 +484,8 @@ const { t } = useTranslation();
                 <div className="project_button">
                 <Link to='contact'
               smooth={true}
-              duration={1000}>
+              duration={1000}
+              className="link-scroll">
                   <div className="btn-home">
                   Solicitud de cotización
                     </div>

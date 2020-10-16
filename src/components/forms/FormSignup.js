@@ -44,9 +44,9 @@ const FormSignup = ({ submitForm }) => {
           <br></br>
           <select name="package" className="form-input" id="package">
               <option value="">Selecciona</option>
-              <option value="Basic">Básico</option>
-              <option value="Standard">Standard</option>
-              <option value="Premium">Premium</option>
+              <option name="basic" type="text" value="Basic">Básico</option>
+              <option name="standard" type="text" value="Standard">Standard</option>
+              <option name="premium" type="text" value="Premium">Premium</option>
             </select>
         </div>
         <div className='form-inputs'>
