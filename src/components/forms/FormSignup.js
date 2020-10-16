@@ -42,11 +42,11 @@ const FormSignup = ({ submitForm }) => {
         <div className='form-inputs'>
           <label className='form-label'>Selecciona un plan</label>
           <br></br>
-          <select name="package" className="form-input" id="package">
+          <select name="package" value={values.package} onChange={handleChange} className="form-input" id="package">
               <option value="">Selecciona</option>
-              <option name="basic" type="text" value="Basic">Básico</option>
-              <option name="standard" type="text" value="Standard">Standard</option>
-              <option name="premium" type="text" value="Premium">Premium</option>
+              <option   value="basic">Básico</option>
+              <option   value="standard">Standard</option>
+              <option  value="premium">Premium</option>
             </select>
         </div>
         <div className='form-inputs'>
