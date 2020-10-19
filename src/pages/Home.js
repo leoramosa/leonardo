@@ -49,7 +49,7 @@ const { t } = useTranslation();
   return (
     
     <React.Fragment>
-      {prompt && <InstallPWA />}
+      
       <Container className="HomeLayout">
         <React.Fragment>
           <div className="hero">
@@ -511,6 +511,7 @@ const { t } = useTranslation();
         </div>
         </div>
       </section>
+      {prompt && <InstallPWA />}
       </React.Fragment>
   );
 }
