@@ -33,15 +33,13 @@ import web5 from '../images/project5.jpg'
 import web6 from '../images/project6.jpg'
 
 import { useTranslation } from 'react-i18next';
-import useIsIOS from './../componentsApple/Hooks/useIsIOS'
-import { InstallPWA } from './../InstallPWA'
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 SwiperCore.use([Autoplay]);
 
 
-const Home = props => {
-const { prompt } = useIsIOS();
+function Home() {
+
 
 const { t } = useTranslation();
 
@@ -511,7 +509,7 @@ const { t } = useTranslation();
         </div>
         </div>
       </section>
-      {prompt && <InstallPWA />}
+     
       </React.Fragment>
   );
 }
