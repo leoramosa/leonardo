@@ -1,4 +1,5 @@
 import React from 'react';
+import useForm from './../components/forms/useForm';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -39,7 +40,8 @@ SwiperCore.use([Autoplay]);
 
 
 function Home() {
-
+  const { handleChange } = useForm(
+  );
 
 const { t } = useTranslation();
 
@@ -85,9 +87,9 @@ const { t } = useTranslation();
           </div>
           <Swiper
             spaceBetween={50}
-            slidesPerView={1}
             loop={true}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            slidesPerView={3}
+            autoplay={{ delay: 2500, disableOnInteraction: true }}
             navigation
             breakpoints={{
               1228: {
@@ -110,8 +112,11 @@ const { t } = useTranslation();
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
             }}
-            
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
           >
@@ -200,7 +205,7 @@ const { t } = useTranslation();
       <section className="section about" id="about" >
         <div className="content about__content">
           <div className="about_info">
-          <h1 className="about__title">Hola, soy Leo. Encantado de conocerte.</h1>
+          <h1 className="about__title">Hola, soy Leonardo, encantado de conocerte.</h1>
           <p>Soy Desarrollador Front-end y diseñador independiente hace casi 2 años, he trabajado a distancia para agencias y he colaborado con personas talentosas para crear productos digitales para uso comercial y de consumo. Tengo una confianza tranquila, una curiosidad natural y un trabajo constante para mejorar mis habilidades.</p>
           </div>
         </div>
@@ -245,6 +250,8 @@ const { t } = useTranslation();
                   <li>Atom</li>
                   <li>Bootstrap</li>
                   <li>Bulma</li>
+                  <li>Material-ui</li>
+                  <li>Materialize</li>
                   <li>Github</li>
                   <li>Terminal</li>
                 </ul>
@@ -421,7 +428,10 @@ const { t } = useTranslation();
                   <Link to='contact'
               smooth={true}
               duration={1000}
-              className="link-scroll">
+              className="link-scroll"
+              name="package" 
+              value="basico" 
+              onChange={handleChange}>
                 
                   <div className="btn-home">
                   Solicitud de cotización
